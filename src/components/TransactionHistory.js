@@ -1,5 +1,5 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 const TransactionHistory = ({ item }) => {
   return (
@@ -27,6 +27,8 @@ const TransactionHistory = ({ item }) => {
   );
 };
 
-// TransactionHistory.propTypes = {}
+TransactionHistory.propTypes = {
+  item: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
+};
 
 export default TransactionHistory;
