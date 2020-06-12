@@ -12,24 +12,22 @@ import friends from "./data/friends.json";
 import TransactionHistory from "./components/TransactionHistory";
 import transactions from "./data/transactions.json";
 
-const App = () => {
-  return (
-    <div>
-      <Profile
-        name={user.name}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats}
-      />
+const App = () => (
+  <>
+    <Profile
+      name={user.name}
+      tag={user.tag}
+      location={user.location}
+      avatar={user.avatar}
+      stats={user.stats}
+    />
 
-      <Statistics stats={statisticalData} />
+    <Statistics stats={statisticalData} />
 
-      <FriendList friends={friends} />
+    <FriendList friends={friends} />
 
-      <TransactionHistory item={transactions} />
-    </div>
-  );
-};
+    <TransactionHistory item={transactions} />
+  </>
+);
 
 export default App;

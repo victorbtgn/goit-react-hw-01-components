@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const FriendListItem = ({ friends }) => {
-  return friends.map(({ avatar, name, isOnline, id }) => {
+const FriendListItem = ({ friends }) =>
+  friends.map(({ avatar, name, isOnline, id }) => {
     return (
       <li key={id} className="item">
         <span className="status"></span>
@@ -11,7 +11,6 @@ const FriendListItem = ({ friends }) => {
       </li>
     );
   });
-};
 
 FriendListItem.propTypes = {
   avatar: PropTypes.string,
