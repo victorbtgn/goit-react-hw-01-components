@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const labels = [];
 const statData = [];
@@ -24,7 +24,7 @@ const Statistics = ({ stats, title }) => {
 };
 
 Statistics.defaultProps = {
-  title: "",
+  title: '',
 };
 
 Statistics.propTypes = {
@@ -33,9 +33,9 @@ Statistics.propTypes = {
 };
 
 function filterStats(array) {
-  array.forEach((item) => {
+  array.forEach(item => {
     if (labels.includes(item.label)) {
-      statData.forEach((i) => {
+      statData.forEach(i => {
         if (i.label === item.label) {
           i.percentage += item.percentage;
         }
