@@ -1,0 +1,35 @@
+.transactionHistory {
+  width: 500px;
+  text-align: center;
+  box-shadow: 0 5px 20px;
+}
+
+thead {
+  font-size: 20px;
+  color: #f3f2f2;
+  background-color: #23ecec;
+}
+
+tbody {
+  color: #818181;
+}
+
+.transactionHistory,
+th,
+td {
+  border: 1px solid #929292;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: #c5c5c5;
+}
+
+tbody > tr:nth-of-type(odd) {
+  background-color: #f1f7f7;
+}

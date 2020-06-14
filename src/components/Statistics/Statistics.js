@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Statistics.module.css';
 
 const labels = [];
 const statData = [];
@@ -8,16 +9,24 @@ const Statistics = ({ stats, title }) => {
   filterStats(stats);
 
   return (
-    <section className="statistics">
-      {title && <h2 className="title">{title}</h2>}
+    <section className={styles.statistics}>
+      {title && <h2 className={styles.title}>{title}</h2>}
 
-      <ul className="stat-list">
-        {statData.map(({ label, percentage, id }) => (
-          <li key={id} className="item">
-            <span className="label">{label} - </span>
-            <span className="percentage">{percentage}</span>
-          </li>
-        ))}
+      <ul className={styles.statList}>
+        {statData.map(({ label, percentage, id }) => {
+          let bgColor = '#' + Math.random().toString(16).substr(-6);
+
+          return (
+            <li
+              key={id}
+              className={styles.item}
+              style={{ backgroundColor: bgColor }}
+            >
+              <span className={styles.label}>{label}</span>
+              <span className={styles.percentage}>{percentage}&#37;</span>
+            </li>
+          );
+        })}
       </ul>
     </section>
   );
