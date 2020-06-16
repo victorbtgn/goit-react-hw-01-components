@@ -7,6 +7,7 @@ const statData = [];
 
 const Statistics = ({ stats, title }) => {
   filterStats(stats);
+  const hexColor = () => '#' + Math.random().toString(16).substr(-6);
 
   return (
     <section className={styles.statistics}>
@@ -14,7 +15,8 @@ const Statistics = ({ stats, title }) => {
 
       <ul className={styles.statList}>
         {statData.map(({ label, percentage, id }) => {
-          let bgColor = '#' + Math.random().toString(16).substr(-6);
+          // let bgColor = '#' + Math.random().toString(16).substr(-6);
+          let bgColor = hexColor();
 
           return (
             <li
