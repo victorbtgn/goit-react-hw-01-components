@@ -14,21 +14,16 @@ const Statistics = ({ stats, title }) => {
       {title && <h2 className={styles.title}>{title}</h2>}
 
       <ul className={styles.statList}>
-        {statData.map(({ label, percentage, id }) => {
-          // let bgColor = '#' + Math.random().toString(16).substr(-6);
-          let bgColor = hexColor();
-
-          return (
-            <li
-              key={id}
-              className={styles.item}
-              style={{ backgroundColor: bgColor }}
-            >
-              <span className={styles.label}>{label}</span>
-              <span className={styles.percentage}>{percentage}&#37;</span>
-            </li>
-          );
-        })}
+        {statData.map(({ label, percentage, id }) => (
+          <li
+            key={id}
+            className={styles.item}
+            style={{ backgroundColor: hexColor() }}
+          >
+            <span className={styles.label}>{label}</span>
+            <span className={styles.percentage}>{percentage}&#37;</span>
+          </li>
+        ))}
       </ul>
     </section>
   );
